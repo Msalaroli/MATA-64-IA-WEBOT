@@ -1,4 +1,4 @@
-from controller import Robot
+from controller import Robot, Camera, Lidar
 
 # intervalos de tempo em ms
 TIME_STEP = 64
@@ -13,6 +13,7 @@ lidar  = robot.getDevice('lidar')
 # habilita ambos os sensores
 camera.enable(TIME_STEP)
 lidar.enable(TIME_STEP)
+lidar.enabelPointCloud()
 
 print(">>> testBoth iniciado: Camera e Lidar habilitados")
 
